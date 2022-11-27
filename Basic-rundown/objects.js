@@ -1,5 +1,5 @@
 /*
----------------> node objects.js <--------------
+---------------> node Basic-rundown/objects.js  <--------------
 POJO
 P(lain)  O(ld)  J(avaScript)  O(bject)
 Objects are data structures
@@ -28,26 +28,17 @@ console.table(obj)
 
 console.log("--------------------------------------------------")
 
+console.log("Iterating through Objects")
+/*
+when iterating through a object we have to careful as objects are unordered in they're indices
+-for in loop targets the keys in the and iterate through every key
+*/
 let obj1 = { a: 1, b: 2, c: 3, d: 4 }
 
 for (let keys in obj1) {
     // by using the for in loop we can iterate through the keys of the object
     console.log(keys)
     // similar to accessing elements in a array; we can access the values of keys by our specified key in [] on the right of the object
-    let value = obj1[keys]
-    console.log(value)
-}
-console.log("--------------------------------------------------")
-// obj1 = { a: 1, b: 2, c: 3, d: 4 }
-console.log("Iterating through Objects")
-/*
-when iterating through a object we have to careful as objects are unordered in theyre indices
--for in loop targets the keys in the and iterate through every key
-*/
-
-for (let keys in obj1) {
-    console.log(keys)
-    // we can assign values to variable the same way we attach array[index]
     let value = obj1[keys]
     console.log(value)
 }
@@ -78,3 +69,38 @@ const allTheValue = (obj1) => {
 console.log(allTheValue(obj1)) // [1,2,3,4]
 
 console.log("--------------------------------------------------")
+
+console.log("Destructuring")
+// we have a regular object
+let obj4 = { a: 1, b: 2, c: 3, d: 4 }
+// console.log(a)  //ReferenceError: a is not defined
+// console.log(b)  //ReferenceError: b is not defined
+// console.log(c)  //ReferenceError: c is not defined
+// console.log(d)  //ReferenceError: d is not defined
+// we can assign the objects keys as variables
+let { a, b, c, d } = obj4
+console.log(a)  // 1
+console.log(b)  // 2
+console.log(c)  // 3
+console.log(d)  // 4
+
+console.log("--------------------------------------------------")
+
+console.log("Nested Objects")
+
+let obj5 = {
+    "apple": { "a": 1, "p": 2, "l": 1, "e": 1 },
+    "banana": { "b": 1, "a": 3, "n": 2 },
+    "mango": { "m": 1, "a": 1, "n": 1, "g": 1, "o": 1 }
+}
+
+console.table(obj5)
+
+for (let innerObj in obj5) {
+    console.log(innerObj) // apple
+    console.log(obj5[innerObj]) // { "a": 1, "p": 2, "l": 1, "e": 1 }
+    let subObj = obj5[innerObj] // we assign the sub object to a variable for easier use
+    for (let keys in subObj) {  // now we can iterate through the sub object
+        console.log(keys) // prints a then p then  l then e
+    }
+}
