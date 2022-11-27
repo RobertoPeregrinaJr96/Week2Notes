@@ -1,5 +1,5 @@
 /*
----------------> Basic-rundown/node closures.js <--------------
+---------------> node Basic-rundown/closures.js <--------------
 */
 
 function sundaeOrder() {
@@ -23,3 +23,29 @@ console.log(sundae("caramel")) // => "A bowl of ice cream with hot fudge and nut
 
 let sundae2 = sundaeOrder(); // => returns a function
 console.log(sundae2("banana")) // => "A bowl of ice cream with hot fudge and banana"
+
+/*
+1 ) the function sundae2 will be invoked
+2 ) the function sundae will run since its assigned to sundae 2
+3 ) since sundae inside is inside a function we have to return a function
+4 ) the returned function will hold the arguments that sundae2 passed through(toppings)
+5 ) once we have the arguments ,now we can manipulate what we need to get back what we want which is have our string concat with the argument
+*/
+
+s
+
+const sums = () => {
+    let sum = 0  // this is our container
+    return function (...nums) { // we are returning a function
+        console.log(nums)  // [1,2,3,4,5,6,7,8,9,10]
+        for (let num of nums) { // iterating the nums array
+            sum += num // we are adding num to our container
+        }
+        return sum // we return our container
+    }
+
+}
+
+
+let sumOfNums = sums();
+console.log(sumOfNums(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
