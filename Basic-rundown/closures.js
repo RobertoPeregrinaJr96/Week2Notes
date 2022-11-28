@@ -32,7 +32,7 @@ console.log(sundae2("banana")) // => "A bowl of ice cream with hot fudge and ban
 5 ) once we have the arguments ,now we can manipulate what we need to get back what we want which is have our string concat with the argument
 */
 
-s
+
 
 const sums = () => {
     let sum = 0  // this is our container
