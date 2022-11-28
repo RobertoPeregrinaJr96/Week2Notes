@@ -22,13 +22,13 @@ const addTen = (num) => {
 
 console.log(addNum(0, addTen)) // 10
 
-// we have the main functin with a callback parameter
+// we have the main function with a callback parameter
 let foobar = function (callback) {
     // we will print foo to the terminal
     console.log("foo");
-    // we then invoke the callback that will print hello to the termial
+    // we then invoke the callback that will print hello to the terminal
     callback();
-    // finaly we print bar to the terminal
+    // finally we print bar to the terminal
     console.log("bar");
 };
 // this is the function that will be called

@@ -3,7 +3,7 @@
 POJO
 P(lain)  O(ld)  J(avaScript)  O(bject)
 Objects are data structures
--in a object are key that are paired with a value coincidentally called a    key-value pair
+-in a object are key that are paired with a value coincidentally called a  key-value pair
 - a key without a value will by be undefined by default
 -Objects are a Reference type which means that the reference a place in the memory
 */
