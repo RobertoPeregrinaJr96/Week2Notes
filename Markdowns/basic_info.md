@@ -89,3 +89,28 @@ console.table(obj1);
 // arrays are also considered objects
 console.table(arr);
 ```
+
+```js
+//----------"Scope" ---------------
+
+// 1 Global Scope
+let chicken = "bokbok";
+
+function farmTime() {
+  // 2 Function Scope
+  console.log(chicken);
+
+  if (true) {
+    // 3 Block Scope
+    let cow = "moo";
+  }
+}
+```
+
+
+1 ) Global Scope is the widest scope as it can be call anywhere in the file.
+    - it is placed outside any function ; it is not enclosed by anything
+2 ) Function Scope is everything within a function.
+    - it can call from the outside its Scope but not from Scope within itself
+3 ) Block Scope are blocks of code within a function like a for loop, conditional or a method.
+    - it can call code from anywhere as it is the bottom of the Scope figural hierarchy
