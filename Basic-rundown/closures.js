@@ -89,7 +89,7 @@ const curriedSum = (numArgs) => {
             })
         -   return our container *total*
             return total
-        } else {   if false
+        } else {   - if false
         -  we return curry invoked
             return curry
         }
