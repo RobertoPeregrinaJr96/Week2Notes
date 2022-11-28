@@ -1,6 +1,4 @@
-/_
----------------> node Basic-rundown/advance_array_methods.js <--------------
-_/
+**- for a better format pls right click the tab or file and select preview -**
 
 the simplest explanation of advance array function is that they are methods that have a function within their parentheses for one sole purpose
 
