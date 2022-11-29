@@ -36,6 +36,17 @@ const additionWithReduce = (nums, accumulator) => {
 console.log(additionWithReduce([10, 3, 5, 2], 100)); // 120
 console.log(additionWithReduce([4, 3], 42)); // 49
 
+function initials(str) {
+    return str.split(' ').reduce((acc, word) => {
+        acc += word[0].toUpperCase();
+        return acc;
+    }, '')
+}
+
+console.log(initials('anna paschall')); // 'AP'
+console.log(initials('Mary La Grange')); // 'MLG'
+console.log(initials('brian crawford scott')); // 'BCS'
+console.log(initials('Benicio Monserrate Rafael del Toro Sánchez')); // 'BMRDTS'
 
 console.log("--------------------------------------------------")
 
